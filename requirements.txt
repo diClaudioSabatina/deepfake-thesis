@@ -1,0 +1,18 @@
+# Local / application environment
+# Python 3.12.10
+#
+# PyTorch was used locally in a CPU-only build.
+# The thesis records: PyTorch 2.13.0+cpu and torchvision 0.28.0+cpu.
+
+torch==2.13.0
+torchvision==0.28.0
+timm==1.0.28
+opencv-python==5.0.0
+numpy==2.5.2
+pandas==3.0.5
+scikit-learn==1.9.0
+matplotlib==3.11.1
+Pillow==12.3.0
+streamlit==1.64.0
+tqdm==4.70.0
+reportlab==5.0.1
