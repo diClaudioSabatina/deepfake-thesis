@@ -187,7 +187,7 @@ NUM_WORKERS = 2
 # e rilancia lo script.
 # ============================================================
 
-SMOKE_TEST = True
+SMOKE_TEST = False
 SMOKE_MAX_BATCHES = 2
 
 
