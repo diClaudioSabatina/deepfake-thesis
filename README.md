@@ -1,8 +1,8 @@
 # Deepfake Thesis
 
-Code and experimental pipeline developed for a Master's thesis on **deepfake detection in static facial images**, with particular attention to detector reliability, robustness to image degradation, confidence calibration, selective classification (abstention), and human-in-the-loop support.
+Code and experimental pipeline developed for a Master's thesis on deepfake detection in static facial images, with particular attention to detector reliability, robustness to image degradation, confidence calibration, selective classification (abstention), and human-in-the-loop support.
 
-The experimental pipeline compares **Xception** and **EfficientNet-B4** on **FaceForensics++ C23** and includes preprocessing, baseline training, robustness analysis, robust retraining, confidence calibration, selective classification, Grad-CAM visualizations, technical/forensic indicators, and a final multi-face Streamlit application.
+The experimental pipeline compares Xception and EfficientNet-B4 on FaceForensics++ C23 and includes preprocessing, baseline training, robustness analysis, robust retraining, confidence calibration, selective classification, Grad-CAM visualizations, technical/forensic indicators, and a final multi-face Streamlit application.
 
 ## Repository structure
 
@@ -53,13 +53,13 @@ The fake class combines the four FaceForensics++ manipulation methods used in th
 - FaceSwap
 - NeuralTextures
 
-The experiments use the **C23** compression setting.
+The experiments use the C23 compression setting.
 
-Ten frames are extracted from each video. Face detection and cropping are performed with **YuNet**. The official FaceForensics++ train/validation/test split definitions are preserved at **video level**, so frames derived from the same source sequence are not assigned to different splits.
+Ten frames are extracted from each video. Face detection and cropping are performed with YuNet. The official FaceForensics++ train/validation/test split definitions are preserved at video level, so frames derived from the same source sequence are not assigned to different splits.
 
 ## Dataset
 
-The FaceForensics++ videos are **not included in this repository**.
+The FaceForensics++ videos are not included in this repository.
 
 For independent reproduction, FaceForensics++ should be obtained through the official project and used according to its access conditions:
 
@@ -122,7 +122,7 @@ Streamlit is used by the final interface, `tqdm` by evaluation scripts for progr
 
 ### Google Colab environment
 
-Training and computationally intensive evaluation were performed on Google Colab using an **NVIDIA Tesla T4** GPU with CUDA 12.8.
+Training and computationally intensive evaluation were performed on Google Colab using an NVIDIA Tesla T4 GPU with CUDA 12.8.
 
 The thesis records the following main Colab environment:
 
@@ -297,7 +297,7 @@ before running the full experiment.
 
 ## Calibration
 
-Confidence calibration is performed using **Temperature Scaling**.
+Confidence calibration is performed using Temperature Scaling.
 
 The calibration workflow is available in:
 
@@ -315,7 +315,7 @@ Calibration results are specific to the experimental domain and should not be in
 
 ## Selective classification
 
-The project implements selective classification, allowing a detector to **abstain** when its calibrated confidence is below a threshold selected on the validation set.
+The project implements selective classification, allowing a detector to abstain when its calibrated confidence is below a threshold selected on the validation set.
 
 The main workflow is available in:
 
@@ -329,7 +329,7 @@ The additional analysis under degraded conditions is available in:
 notebooks/colab/selective_classification_degraded_analysis.ipynb
 ```
 
-The mechanism is evaluated through **coverage** and **selective risk**.
+The mechanism is evaluated through coverage and selective risk.
 
 An `ABSTAIN` output means that the detector output does not satisfy the selected confidence criterion and that human review is recommended.
 
