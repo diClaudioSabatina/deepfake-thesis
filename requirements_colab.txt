@@ -2,15 +2,21 @@
 # GPU used in the thesis: NVIDIA Tesla T4
 # CUDA environment reported in the thesis: 12.8
 #
-# The thesis records: PyTorch 2.11.0+cu128 and torchvision 0.26.0+cu128.
+# The thesis records PyTorch 2.11.0+cu128 and torchvision 0.26.0+cu128.
+# The base package versions are pinned below.
+# OpenCV reports cv2.__version__ == 5.0.0; the corresponding PyPI
+# opencv-python distribution is 5.0.0.93.
+#
+# tqdm is required by the evaluation scripts, but its exact Colab
+# version was not recorded in the thesis environment snapshot.
 
 torch==2.11.0
 torchvision==0.26.0
 timm==1.0.28
-opencv-python==5.0.0
+opencv-python==5.0.0.93
 numpy==2.1.3
 pandas==2.2.3
 scikit-learn==1.6.1
 matplotlib==3.10.0
 Pillow==11.3.0
-tqdm==4.70.0
+tqdm
